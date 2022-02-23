@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require('express')
 const initDBConnection = require('./db/dbconnect')
 const productRouter = require('./routes/product')
@@ -7,9 +6,11 @@ const paymodeRouter = require('./routes/paymode')
 const invoiceRouter = require('./routes/invoice')
 const customerRouter = require('./routes/customer')
 
+require("dotenv").config();
+
 //Create an express application
 const app = express()
-const PORT = 8000 || process.env.PORT
+const PORT = process.env.PORT || 8000
 
 initDBConnection()
 
