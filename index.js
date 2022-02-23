@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express')
 const initDBConnection = require('./db/dbconnect')
 const productRouter = require('./routes/product')
