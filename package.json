@@ -4,7 +4,8 @@
   "description": "dummy api from which cranesoft desktop will fetch data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm index"
   },
   "author": "juniorbuba <juniorbuba4real@gmail.com>",
   "license": "MIT",
