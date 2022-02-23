@@ -20,26 +20,6 @@ router.get('/products', async function (req, res) {
     }
 })
 
-router.get('/product/:id', async (req, res) => {
-    const _id = req.params.id
-    try{
-        const product = await Product.findAll({
-            where: {
-                product_name: _id
-            }
-        })
-        if(product.length === 0){
-            res.status(404).send({null: 'no products found for given ID'})
-        }
-        else{
-            res.status(200).send({product})
-        }
-    }
-    catch(e){
-        res.status(500).send({fail: 'could not fetch single product details'})
-    }
-})
-
 router.get('/product_category/:id', async (req, res) => {
     const category_id = req.params.id
     try{
