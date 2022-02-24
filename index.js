@@ -25,4 +25,8 @@ app.get('/test', (req, res) => {
     res.send('test')
 })
 
+app.get('/', (req, res) => {
+    res.send('Cranesoft cloud api homepage, navigate to /products, /customers or /categories to see the JSON response')
+})
+
 app.listen(PORT, () => console.log(`Your server is running on port ${PORT}`))
