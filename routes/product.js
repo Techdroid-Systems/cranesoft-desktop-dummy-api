@@ -8,7 +8,7 @@ router.get('/products', async function (req, res) {
     try{
         const products = await Product.findAll()
 
-        if(products.length === 0){
+        if(products.length == 0){
             res.status(404).send({null: 'No products saved yet'})
         }
         else{

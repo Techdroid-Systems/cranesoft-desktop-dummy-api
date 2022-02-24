@@ -6,11 +6,11 @@ const Invoice = require('../models/invoice')
 const Customer = require('../models/customer')
 
 var connection = {
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
+    host     : '209.205.200.218',
+    user     : 'modelout_modelout',
+    password : 'fvDjq)CA;&Oa',
     port: 3306,
-    database : 'cranesoft_erp'
+    database : 'modelout_cranesoft_cloud_db'
   };
 
   const initDatabaseConnection = function(){
