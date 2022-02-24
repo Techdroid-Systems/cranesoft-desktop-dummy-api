@@ -27,6 +27,7 @@ var connection = {
             Customer.sync()
         }).catch((e) => {
             console.log("Connection to database failed")
+            console.log(e)
         })
   }
 
