@@ -25,9 +25,9 @@ var connection = {
             Paymode.sync()
             Invoice.sync()
             Customer.sync()
-        }).catch((e) => {
+        }).catch((error) => {
             console.log("Connection to database failed")
-            console.log(e)
+            console.log(error)
         })
   }
 
