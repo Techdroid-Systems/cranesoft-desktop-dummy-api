@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize')
-const postgres = require('postgres')
 const Product = require('../models/product')
 const Category = require('../models/category')
 const Paymode = require('../models/paymode')
@@ -15,8 +14,8 @@ var connection = {
   };
 
   const initDatabaseConnection = function(){
-       var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database + '') 
-       console.log(sequelize)
+       var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
+       console.log('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
 
         sequelize.authenticate().then(() => {
             console.log("========================================")
