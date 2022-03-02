@@ -15,6 +15,7 @@ var connection = {
 
   const initDatabaseConnection = function(){
        var sequelize = new Sequelize('mysql2://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database + '') 
+       console.log(sequelize)
 
         sequelize.authenticate().then(() => {
             console.log("========================================")
