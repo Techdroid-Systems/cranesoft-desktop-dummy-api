@@ -15,6 +15,7 @@ var connection = {
 
   const initDatabaseConnection = function(){
        var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
+       console.log(sequelize)
        console.log('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
 
         sequelize.authenticate().then(() => {
