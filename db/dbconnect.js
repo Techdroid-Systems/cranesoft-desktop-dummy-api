@@ -7,15 +7,15 @@ const Invoice = require('../models/invoice')
 const Customer = require('../models/customer')
 
 var connection = {
-    host     : 'ec2-3-209-61-239.compute-1.amazonaws.com',
-    user     : 'pnjdfneqzyazwy',
-    password : 'd88223c48f915921cce3f14ab8e0c8bb6b14d1dd8a0dbfb3982e0aca991ea068',
-    port: 5432,
-    database : 'd960hlmn1bpdoj'
+    host     : 'us-cdbr-east-05.cleardb.net',
+    user     : 'bb519458bc3e76',
+    password : '375b0891',
+    port: 3306,
+    database : 'heroku_c2a92912ce7b58a'
   };
 
   const initDatabaseConnection = function(){
-       var sequelize = new Sequelize('postgres://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database + '') 
+       var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database + '') 
        console.log(sequelize)
 
         sequelize.authenticate().then(() => {
