@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize')
+const postgres = require('postgres')
 const Product = require('../models/product')
 const Category = require('../models/category')
 const Paymode = require('../models/paymode')
