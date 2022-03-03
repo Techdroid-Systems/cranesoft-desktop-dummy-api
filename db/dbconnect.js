@@ -6,17 +6,17 @@ const Invoice = require('../models/invoice')
 const Customer = require('../models/customer')
 
 var connection = {
-    host     : 'us-cdbr-east-05.cleardb.net',
-    user     : 'bb519458bc3e76',
-    password : '375b0891',
+    host     : '209.205.200.218',
+    user     : 'modelout_crane',
+    password : 'superstrongpassword1',
     port: 3306,
-    database : 'heroku_c2a92912ce7b58a'
+    database : 'modelout_cranesoft_cloud_db'
   };
 
   const initDatabaseConnection = function(){
-       var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
+       var sequelize = new Sequelize('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database)
        console.log(sequelize)
-       console.log('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + '/' + connection.database + '?reconnect=true')
+       console.log('mysql://' + connection.user + ':' + connection.password + '@' + connection.host + ':' + connection.port + '/' + connection.database)
 
         sequelize.authenticate().then(() => {
             console.log("========================================")
