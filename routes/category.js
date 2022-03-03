@@ -16,6 +16,7 @@ router.get('/categories', async function (req, res) {
     }
     catch(e){
         res.status(500).send({fail: 'Could not fetch categories'})
+        console.log(e)
     }
 })
 
