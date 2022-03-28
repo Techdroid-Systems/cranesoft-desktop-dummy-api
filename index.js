@@ -22,7 +22,7 @@ app.use(invoiceRouter)
 app.use(customerRouter)
 
 app.get('/test', (req, res) => {
-    res.send('test')
+    res.send('test cranesoft cloud api')
 })
 
 app.get('/', (req, res) => {
